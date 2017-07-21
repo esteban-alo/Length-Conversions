@@ -46,10 +46,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let segmentedInitIndex = segmentedInit.selectedSegmentIndex
         let segmentedOutIndex = segmentedOut.selectedSegmentIndex
         
-        
-        print(segmentedInitIndex)
-        print(segmentedOutIndex)
-        
         if segmentedInitIndex == segmentedOutIndex {
             resultDistanceValue = distanceValue
             setConvertionResult(distanceValue: distanceValue, resultDistanceValue: resultDistanceValue)
@@ -72,7 +68,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
             resultDistanceValue = distanceValue / 1093.61
             setConvertionResult(distanceValue: distanceValue, resultDistanceValue: resultDistanceValue)
         }
-        
     }
     
     func getUnitLegth (segmentedControl : UISegmentedControl) -> String {
