@@ -10,17 +10,13 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
-    // Convertion Units
-    let mileUnit : Double = 1609.34
-    let yardUnit : Double = 1760
-    
     // Outlets
     @IBOutlet var txtDistance: UITextField!
     @IBOutlet var lblConvertionResult: UILabel!
     @IBOutlet var segmentedInit: UISegmentedControl!
     @IBOutlet var segmentedOut: UISegmentedControl!
     
-    
+    // Variables
     var distanceValue : Double = 0.0
     
     override func viewDidLoad() {
@@ -36,51 +32,57 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
 
     @IBAction func calculateDistance(_ sender: UIButton) {
-        let segmentedInitUnit = getUnitLegth(segmentedControl: segmentedInit)
-        let segmentedOutUnit = getUnitLegth(segmentedControl: segmentedOut)
-        
-        let segmentedInitValue = segmentedInit.selectedSegmentIndex
-        let segmentedOutValue = segmentedOut.selectedSegmentIndex
-        
-        print(segmentedInitValue)
-        print(segmentedOutValue)
-        
         if txtDistance.text == "" {
             txtDistance.text = "0.0"
         } else {
             distanceValue = Double(self.txtDistance.text!)!
         }
-        
-        if segmentedInitValue == segmentedOutValue {
-            let initDistanceValue = roundValue(numValue: distanceValue)
-            let outDistanceValue = roundValue(numValue: distanceValue)
-            
-            let resultMessage = initDistanceValue + segmentedInitUnit + " = " + outDistanceValue + segmentedOutUnit
-            lblConvertionResult.text = resultMessage
-            lblConvertionResult.isHidden = false
-        }
+        calculteLengthConvertion(distancevalue: distanceValue)
     }
     
-    
-    
-    func calculteLengthConvertion(distanceValue : Double) {
-        if segmentedInit == segmentedOut {
-            print(segmentedInit)
+    func calculteLengthConvertion(distancevalue : Double) {
+        var resultDistanceValue : Double = 0.0
+        
+        let segmentedInitIndex = segmentedInit.selectedSegmentIndex
+        let segmentedOutIndex = segmentedOut.selectedSegmentIndex
+        
+        
+        print(segmentedInitIndex)
+        print(segmentedOutIndex)
+        
+        if segmentedInitIndex == segmentedOutIndex {
+            resultDistanceValue = distanceValue
+            setConvertionResult(distanceValue: distanceValue, resultDistanceValue: resultDistanceValue)
+        } else if segmentedInitIndex == 0 && segmentedOutIndex == 1 {
+            resultDistanceValue = distanceValue * 1.60934
+            setConvertionResult(distanceValue: distanceValue, resultDistanceValue: resultDistanceValue)
+        } else if segmentedInitIndex == 0 && segmentedOutIndex == 2 {
+            resultDistanceValue = distanceValue * 1760
+            setConvertionResult(distanceValue: distanceValue, resultDistanceValue: resultDistanceValue)
+        } else if segmentedInitIndex == 1 && segmentedOutIndex == 0 {
+            resultDistanceValue = distanceValue / 1.60934
+            setConvertionResult(distanceValue: distanceValue, resultDistanceValue: resultDistanceValue)
+        } else if segmentedInitIndex == 1 && segmentedOutIndex == 2 {
+            resultDistanceValue = distanceValue * 1093.61
+            setConvertionResult(distanceValue: distanceValue, resultDistanceValue: resultDistanceValue)
+        } else if segmentedInitIndex == 2 && segmentedOutIndex == 0 {
+            resultDistanceValue = distanceValue / 1760
+            setConvertionResult(distanceValue: distanceValue, resultDistanceValue: resultDistanceValue)
+        } else if segmentedInitIndex == 2 && segmentedOutIndex == 1 {
+            resultDistanceValue = distanceValue / 1093.61
+            setConvertionResult(distanceValue: distanceValue, resultDistanceValue: resultDistanceValue)
         }
         
-        print("Unidad 1 \(segmentedInit)")
     }
     
     func getUnitLegth (segmentedControl : UISegmentedControl) -> String {
         switch segmentedControl.selectedSegmentIndex {
         case 0:
-            return "mi"
+            return "[mi]"
         case 1:
-            return "m"
+            return "[km]"
         case 2:
-            return "km"
-        case 3:
-            return "yd"
+            return "[yd]"
         default:
             return ""
         }
@@ -90,9 +92,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return String(format:"%.2f", numValue)
     }
     
-    
-    func showConvertion(number : Double, convertionType : String) {
-        self.lblConvertionResult.isHidden = false
+    func setConvertionResult(distanceValue : Double, resultDistanceValue : Double) {
+        let segmentedInitUnit = getUnitLegth(segmentedControl: segmentedInit)
+        let segmentedOutUnit = getUnitLegth(segmentedControl: segmentedOut)
+        
+        let initDistanceValue = roundValue(numValue: distanceValue)
+        let outDistanceValue = roundValue(numValue: resultDistanceValue)
+        
+        let resultMessageInit = String(initDistanceValue + " " + segmentedInitUnit)
+        let resultMessageOut = String (outDistanceValue + " " + segmentedOutUnit)
+        
+        
+        lblConvertionResult.text = String(resultMessageInit! + " = " + resultMessageOut!)
+        lblConvertionResult.isHidden = false
     }
     
     // Hide Keyboard Functions

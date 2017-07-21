@@ -1,3 +1,5 @@
+/* Class = "UILabel"; text = "Label"; ObjectID = "oaP-5G-7mj"; */
+"oaP-5G-7mj.text" = "Calculadora de Longitudes";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "hcY-Ol-XsE"; */
 "hcY-Ol-XsE.text" = "Resultado";
@@ -6,23 +8,22 @@
 "ifB-xT-HNC.normalTitle" = "Convertir";
 
 /* Class = "UISegmentedControl"; l8L-UU-ajf.segmentTitles[0] = "First"; ObjectID = "l8L-UU-ajf"; */
-"l8L-UU-ajf.segmentTitles[0]" = "Millas";
+"l8L-UU-ajf.segmentTitles[0]" = "Milla";
 
 /* Class = "UISegmentedControl"; l8L-UU-ajf.segmentTitles[1] = "Second"; ObjectID = "l8L-UU-ajf"; */
-"l8L-UU-ajf.segmentTitles[1]" = "Metros";
+"l8L-UU-ajf.segmentTitles[1]" = "Kilómetro";
 
 /* Class = "UISegmentedControl"; l8L-UU-ajf.segmentTitles[1] = "Second"; ObjectID = "l8L-UU-ajf"; */
-"l8L-UU-ajf.segmentTitles[2]" = "Yardas";
+"l8L-UU-ajf.segmentTitles[2]" = "Yarda";
 
 /* Class = "UISegmentedControl"; l8L-UU-ajf.segmentTitles[0] = "First"; ObjectID = "l8L-UU-ajf"; */
-"US4-W3-jqW.segmentTitles[0]" = "Millas";
+"US4-W3-jqW.segmentTitles[0]" = "Milla";
 
 /* Class = "UISegmentedControl"; l8L-UU-ajf.segmentTitles[1] = "Second"; ObjectID = "l8L-UU-ajf"; */
-"US4-W3-jqW.segmentTitles[1]" = "Metros";
+"US4-W3-jqW.segmentTitles[1]" = "Kilómetro";
 
 /* Class = "UISegmentedControl"; l8L-UU-ajf.segmentTitles[1] = "Second"; ObjectID = "l8L-UU-ajf"; */
-"US4-W3-jqW.segmentTitles[2]" = "Yardas";
+"US4-W3-jqW.segmentTitles[2]" = "Yarda";
 
 
-/* Class = "UILabel"; text = "Label"; ObjectID = "oaP-5G-7mj"; */
-"oaP-5G-7mj.text" = "Millas a Metros";
+
