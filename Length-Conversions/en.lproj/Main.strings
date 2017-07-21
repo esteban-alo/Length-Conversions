@@ -1,0 +1,26 @@
+/* Class = "UILabel"; text = "Label"; ObjectID = "oaP-5G-7mj"; */
+"oaP-5G-7mj.text" = "Miles to Meters";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ifB-xT-HNC"; */
+"ifB-xT-HNC.normalTitle" = "Convert";
+
+/* Class = "UISegmentedControl"; l8L-UU-ajf.segmentTitles[0] = "First"; ObjectID = "l8L-UU-ajf"; */
+"l8L-UU-ajf.segmentTitles[0]" = "Miles";
+
+/* Class = "UISegmentedControl"; l8L-UU-ajf.segmentTitles[1] = "Second"; ObjectID = "l8L-UU-ajf"; */
+"l8L-UU-ajf.segmentTitles[1]" = "Kilometers";
+
+/* Class = "UISegmentedControl"; l8L-UU-ajf.segmentTitles[1] = "Second"; ObjectID = "l8L-UU-ajf"; */
+"l8L-UU-ajf.segmentTitles[2]" = "Yards";
+
+/* Class = "UISegmentedControl"; l8L-UU-ajf.segmentTitles[0] = "First"; ObjectID = "l8L-UU-ajf"; */
+"US4-W3-jqW.segmentTitles[0]" = "Miles";
+
+/* Class = "UISegmentedControl"; l8L-UU-ajf.segmentTitles[1] = "Second"; ObjectID = "l8L-UU-ajf"; */
+"US4-W3-jqW.segmentTitles[1]" = "Kilometers";
+
+/* Class = "UISegmentedControl"; l8L-UU-ajf.segmentTitles[1] = "Second"; ObjectID = "l8L-UU-ajf"; */
+"US4-W3-jqW.segmentTitles[2]" = "Yards";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "hcY-Ol-XsE"; */
+"hcY-Ol-XsE.text" = "Result";

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Length_Conversions" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaP-5G-7mj" userLabel="lbl_app_title">
+                                <rect key="frame" x="155" y="78" width="66" height="30"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BxV-dt-DqN" userLabel="txt_distance">
+                                <rect key="frame" x="16" y="155" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifB-xT-HNC" userLabel="btn_convert">
+                                <rect key="frame" x="157" y="566" width="60" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="calculateDistance:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6u6-7e-1qR"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhK-iX-QLt" userLabel="lbl_result">
+                                <rect key="frame" x="162" y="426" width="51.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="US4-W3-jqW" userLabel="sgc_output">
+                                <rect key="frame" x="16" y="326" width="343" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="l8L-UU-ajf" userLabel="sgc_init">
+                                <rect key="frame" x="16" y="273" width="343" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BxV-dt-DqN" firstAttribute="top" secondItem="oaP-5G-7mj" secondAttribute="bottom" constant="47" id="1P1-JL-Uai"/>
+                            <constraint firstItem="BxV-dt-DqN" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="3x8-0W-2Da"/>
+                            <constraint firstItem="nhK-iX-QLt" firstAttribute="top" secondItem="US4-W3-jqW" secondAttribute="bottom" constant="72" id="45k-xZ-OIc"/>
+                            <constraint firstItem="US4-W3-jqW" firstAttribute="top" secondItem="l8L-UU-ajf" secondAttribute="bottom" constant="25" id="7rD-8g-2rx"/>
+                            <constraint firstItem="oaP-5G-7mj" firstAttribute="centerX" secondItem="BxV-dt-DqN" secondAttribute="centerX" id="KGr-tt-fWG"/>
+                            <constraint firstItem="BxV-dt-DqN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KP8-CB-4OO"/>
+                            <constraint firstItem="oaP-5G-7mj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="58" id="O6Y-VW-bTL"/>
+                            <constraint firstItem="l8L-UU-ajf" firstAttribute="top" secondItem="BxV-dt-DqN" secondAttribute="bottom" constant="88" id="OGL-4k-fHP"/>
+                            <constraint firstItem="BxV-dt-DqN" firstAttribute="trailing" secondItem="l8L-UU-ajf" secondAttribute="trailing" id="WXd-xW-P2M"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ifB-xT-HNC" secondAttribute="bottom" constant="65" id="dcv-hJ-6Ht"/>
+                            <constraint firstItem="BxV-dt-DqN" firstAttribute="leading" secondItem="l8L-UU-ajf" secondAttribute="leading" id="fno-2B-cIY"/>
+                            <constraint firstItem="nhK-iX-QLt" firstAttribute="centerX" secondItem="ifB-xT-HNC" secondAttribute="centerX" id="ihf-4X-OGV"/>
+                            <constraint firstItem="US4-W3-jqW" firstAttribute="centerX" secondItem="nhK-iX-QLt" secondAttribute="centerX" id="ocK-Sn-WWa"/>
+                            <constraint firstItem="l8L-UU-ajf" firstAttribute="trailing" secondItem="US4-W3-jqW" secondAttribute="trailing" id="p6l-ch-02c"/>
+                            <constraint firstItem="l8L-UU-ajf" firstAttribute="leading" secondItem="US4-W3-jqW" secondAttribute="leading" id="sha-ad-E1y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblConvertionResult" destination="nhK-iX-QLt" id="Gag-cB-mQA"/>
+                        <outlet property="segmentedInit" destination="l8L-UU-ajf" id="L8v-qg-1hE"/>
+                        <outlet property="segmentedOut" destination="US4-W3-jqW" id="FIx-KC-A7o"/>
+                        <outlet property="txtDistance" destination="BxV-dt-DqN" id="YPR-cb-dkz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>

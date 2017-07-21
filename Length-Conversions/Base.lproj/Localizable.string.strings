@@ -1,0 +1,10 @@
+/* 
+  Localizable.string.strings
+  Miles to Meters
+
+  Created by Esteban Rodríguez Alonso on 19/07/17.
+  Copyright © 2017 Esteban Rodríguez Alonso. All rights reserved.
+*/
+"Miles" = "Miles";
+"Km" = "Kilometers";
+"Yards" = "Yards";
