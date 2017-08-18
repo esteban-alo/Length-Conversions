@@ -2,7 +2,7 @@
 "oaP-5G-7mj.text" = "Length Calculator";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ifB-xT-HNC"; */
-"ifB-xT-HNC.normalTitle" = "Convert";
+"ifB-xT-HNC.normalTitle" = "=";
 
 /* Class = "UISegmentedControl"; l8L-UU-ajf.segmentTitles[0] = "First"; ObjectID = "l8L-UU-ajf"; */
 "l8L-UU-ajf.segmentTitles[0]" = "Mile";

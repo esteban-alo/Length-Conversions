@@ -15,14 +15,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var lblConvertionResult: UILabel!
     @IBOutlet var segmentedInit: UISegmentedControl!
     @IBOutlet var segmentedOut: UISegmentedControl!
+    @IBOutlet var viewContainer: UIView!
+    @IBOutlet var btnCalculate: UIButton!
     
     // Variables
     var distanceValue : Double = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // Do any additional setup after loading the view, typically from a nib
         txtDistance.delegate = self
+        
+        self.view.backgroundColor = UIColor(hue: 230/360, saturation: 65/100, brightness: 70/100, alpha: 1.0)
+        viewContainer.backgroundColor = UIColor(hue: 217/360, saturation: 73/100, brightness: 100/100, alpha: 1.0)
+        
+        btnCalculate.backgroundColor = UIColor(hue: 340/360, saturation: 87/100, brightness: 91/100, alpha: 1.0)
+    
     }
 
     override func didReceiveMemoryWarning() {
